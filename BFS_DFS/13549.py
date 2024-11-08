@@ -20,7 +20,7 @@ def bfs():
         if x == k:
             break
         
-        for i in (x*2, x+1, x-1):
+        for i in (x*2, x-1, x+1):
             if (0 <= i < limit and not visited[i]):
                 queue.append(i)
                 visited[i] = True
@@ -31,3 +31,4 @@ def bfs():
 
 bfs()
 print(time[k])        
+
