@@ -17,6 +17,9 @@ def bfs(x,y):
     while queue:
         x, y = queue.popleft()
 
+        if (x == m - 1) & (y == n - 1):
+            return True
+
         for i in range(2):
             nx = x + dx[i]
             ny = y + dy[i]
@@ -27,14 +30,12 @@ def bfs(x,y):
                 continue
             
             if graph[nx][ny] == 1:
-                graph[nx][ny] = graph[x][y] + 1
+                graph[nx][ny] = 2
                 queue.append((nx, ny))
-
-    return graph[m-1][n-1]
+    return False
     
 
-result = bfs(0,0)
-if result > 1:
+if bfs(0,0):
     print("Yes")
 else:
     print("No")
