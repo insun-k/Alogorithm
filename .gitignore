@@ -1,0 +1,24 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# 빌드 폴더
+/out/
+target/
+
+# 로그 파일
+*.log
+
+# 운영 체제에 따라 무시해야 할 파일들
+.DS_Store
+Thumbs.db
+
+# Java 빌드 결과물 (예: 클래스 파일)
+*.class
+
+# Maven / Gradle 빌드 디렉토리
+.gradle/
+.build/
+
+# 임시 파일
+*.tmp
