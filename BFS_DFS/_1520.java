@@ -3,7 +3,6 @@ package BFS_DFS;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class _1520 {
@@ -56,8 +55,6 @@ public class _1520 {
 			}
 		}
 
-		visited[0][0] = true;
-		System.out.println(Arrays.deepToString(dp));
 		System.out.println(dfs(0, 0));
 
 	}
