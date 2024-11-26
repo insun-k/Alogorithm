@@ -1,3 +1,4 @@
+// [BOJ-Gold2] 1520_내리막길
 package BFS_DFS;
 
 import java.io.BufferedReader;
@@ -20,10 +21,11 @@ public class _1520 {
 		}
 
 		// 방문했으면 dp 리턴
-		if (dp[x][y] != 0) {
+		if (dp[x][y] != -1) {
 			return dp[x][y];
 		}
 
+		dp[x][y] = 0;
 		for (int i = 0; i < 4; i++) {
 			int nx = x + dx[i];
 			int ny = y + dy[i];
@@ -51,7 +53,7 @@ public class _1520 {
 			st = new StringTokenizer(br.readLine());
 			for (int j = 0; j < n; j++) {
 				graph[i][j] = Integer.parseInt(st.nextToken());
-				dp[i][j] = 0;
+				dp[i][j] = -1;
 			}
 		}
 
